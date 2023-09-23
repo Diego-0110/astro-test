@@ -1,0 +1,79 @@
+---
+import "@fontsource/open-sans"
+import Navigation from "../components/Navigation.astro"
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Navigation />
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--main: #1D1B20;
+		--main-variant: #49454F;
+		--bg: #FEF7FF;
+		--container: #F3EDF7;
+		--container-high: #ECE6F0;
+		--outline: #CAC4D0;
+		--primary: #6750A4;
+		--on-primary: #FFFFFF;
+		--secondary: #E8DEF8;
+		--on-secondary: #1D192B;
+		--muted: #49454F;
+		--error: #B3261E;
+
+		--border-outline: 1.5px solid var(--outline);
+		--border-radius: 12px;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--main: #E6E0E9;
+			--main-variant: #CAC4D0;
+			--bg: #141218;
+			--container: #211F26;
+			--container-high: #2B2930;
+			--outline: #79747E;
+			--primary: #D0BCFF;
+			--on-primary: #381E72;
+			--secondary: #4A4458;
+			--on-secondary: #E8DEF8;
+			--muted: #CAC4D0;
+			--error: #F2B8B5;
+
+			--border-outline: none;
+		}
+	}
+
+	html, body {
+		margin: 0;
+		font-family: "Open Sans", sans-serif;
+	}
+
+	body {
+		background-color: var(--bg);
+		color: var(--main);
+	}
+
+	main {
+		margin: auto;
+		max-width: 800px;
+		width: 100%;
+		padding: 16px;
+		box-sizing: border-box;
+	}
+</style>

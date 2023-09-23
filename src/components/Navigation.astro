@@ -1,0 +1,43 @@
+---
+import "@fontsource/dancing-script";
+---
+<nav>
+  <h1 class="title"><a href="/">Cooking Blog</a></h1>
+  <section class="links">
+    <a class="link" href="/">Home</a>
+  </section>
+</nav>
+
+<style>
+  nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 24px;
+    background-color: var(--container);
+  }
+  .title {
+    margin: 0;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+  }
+  .title > a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .links {
+    display: flex;
+    gap: 16px;
+  }
+  .link {
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+  }
+  .link:hover {
+    text-decoration: underline;
+  }
+</style>
