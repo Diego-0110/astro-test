@@ -1,10 +1,13 @@
 ---
-import "@fontsource/dancing-script";
+// Supports weights 400-700
+import '@fontsource-variable/dancing-script'
 ---
 <nav>
   <h1 class="title"><a href="/">Cooking Blog</a></h1>
   <section class="links">
     <a class="link" href="/">Home</a>
+    <!-- data-astro-reload: to avoid CSS loading issues -->
+    <a class="link" href="/ducks" data-astro-reload>Ducks</a>
   </section>
 </nav>
 
@@ -12,15 +15,16 @@ import "@fontsource/dancing-script";
   nav {
     position: sticky;
     top: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
     padding: 16px;
     gap: 24px;
-    background-color: var(--container);
+    background-color: var(--container-high);
   }
   .title {
     margin: 0;
-    font-family: "Dancing Script", sans-serif;
+    font-family: "Dancing Script Variable", sans-serif;
     font-size: 32px;
     font-weight: normal;
   }

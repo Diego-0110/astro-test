@@ -1,6 +1,9 @@
 ---
-import "@fontsource/open-sans"
+// Supports weights 300-800
+import '@fontsource-variable/open-sans'
+import { ViewTransitions } from 'astro:transitions';
 import Navigation from "../components/Navigation.astro"
+import Footer from "../components/Footer.astro"
 const { title } = Astro.props;
 ---
 
@@ -13,12 +16,14 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<Navigation />
-		<main>
+		<main transition:animate="fade">
 			<slot />
 		</main>
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -61,19 +66,24 @@ const { title } = Astro.props;
 
 	html, body {
 		margin: 0;
-		font-family: "Open Sans", sans-serif;
 	}
 
 	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		background-color: var(--bg);
+		font-family: "Open Sans Variable", sans-serif;
 		color: var(--main);
+		min-height: 100vh;
 	}
 
 	main {
-		margin: auto;
+		flex: 1;
+		margin: 0 auto;
 		max-width: 800px;
 		width: 100%;
-		padding: 16px;
+		padding: 24px 16px 64px 16px;
 		box-sizing: border-box;
 	}
 </style>

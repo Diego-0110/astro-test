@@ -1,8 +1,19 @@
 ---
+// Supports weights 400-700
+import '@fontsource-variable/dancing-script'
 import Layout from "./Layout.astro"
 const { frontmatter } = Astro.props 
 ---
 <Layout>
-  <h1>{frontmatter.title}</h1>
+  <img class="cover" src={frontmatter.cover} alt="cover" height="400">
+  <h1 class="title">{frontmatter.title}</h1>
   <slot />
 </Layout>
+
+<style>
+  .cover {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+</style>

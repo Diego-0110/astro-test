@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^3.0.2",
-    "@fontsource/dancing-script": "^5.0.8",
-    "@fontsource/open-sans": "^5.0.12",
+    "@fontsource-variable/dancing-script": "^5.0.8",
+    "@fontsource-variable/open-sans": "^5.0.13",
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
     "astro": "^3.0.12",
