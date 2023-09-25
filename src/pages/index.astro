@@ -5,7 +5,17 @@ const allPosts = await Astro.glob('./recipes/*.md')
 ---
 
 <Layout title="My Recipes">
-	<h2 class="title">My Recipes</h2>
+	<h2 class="title">Astro files</h2>
+	<p>
+		All this page was made with just HTML, CSS and JavaScript, using the Astro's
+		special syntaxis.
+	</p>
+	<p>
+		With <code>Astro</code> global you have access to multiple methods. For 
+		example, to display all mardowns files of recipes as card, I used 
+		<code>Astro.glob('./recipes/*.md')</code>.
+	</p>
+	<h2>My Recipes</h2>
 	<section class="recipes">
 		{allPosts.map(post =>
 			<RecipeCard post={post}>
