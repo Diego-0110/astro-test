@@ -3,6 +3,10 @@ import RandomDuck from '../components/RandomDuck'
 import Layout from '../layouts/Layout.astro'
 ---
 <Layout title="Ducks">
+  <h2 class="title">Astro Islands</h2>
+  <p>The following section has an interactive component made with React.</p>
+  <p>Astro components by default are static but with the template directive 
+    <code>client:load</code> you can make it interactive.</p>
   <h2 class="title">Random Duck Pictures</h2>
   <RandomDuck client:only="react" />
 </Layout>
