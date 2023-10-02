@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro'
   <p>Astro components by default are static but with the template directive 
     <code>client:load</code> you can make it interactive.</p>
   <h2 class="title">Random Duck Pictures</h2>
-  <RandomDuck client:only="react" />
+  <RandomDuck client:load />
 </Layout>
 
 <style>
