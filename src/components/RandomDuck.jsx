@@ -29,7 +29,9 @@ export default function RandomDuck () {
     <section className={styles.container}>
       {!duck
         ? <div className={styles.duckFallback}></div>
-        : <img className={styles.duck} src={duck} alt="Duck" />}
+        : <div className={styles.duckContainer}>
+            <img className={styles.duck} src={duck} alt="Duck" />
+          </div>}
       <Button handleClick={handleClick}>
         {isLoading? 'Loading...' : 'Quak!'}
       </Button>
