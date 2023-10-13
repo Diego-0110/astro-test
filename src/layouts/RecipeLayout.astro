@@ -4,7 +4,7 @@ import '@fontsource-variable/dancing-script'
 import Layout from "./Layout.astro"
 const { frontmatter } = Astro.props 
 ---
-<Layout>
+<Layout title={frontmatter.title} description="Recipe" image={frontmatter.cover}>
   <img class="cover" src={frontmatter.cover} alt="cover" height="400">
   <h1 class="title">{frontmatter.title}</h1>
   <slot />

@@ -7,7 +7,8 @@ import netlify from '@astrojs/netlify/functions'
 export default defineConfig({
   integrations: [react()],
   adapter: netlify(),
-  output: 'hybrid'
+  output: 'hybrid',
+  site: 'https://diego-0110-astro-test.netlify.app'
 })
 
 // DEVELOPMENT CONFIGURATION

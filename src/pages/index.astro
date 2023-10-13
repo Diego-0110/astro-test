@@ -4,7 +4,9 @@ import RecipeCard from '../components/RecipeCard.astro'
 const allPosts = await Astro.glob('./recipes/*.md')
 ---
 
-<Layout title="My Recipes">
+<Layout title="Astro Test: Cooking Blog"
+	description="Test of the main features of Astro Framework"
+	image="/astro.png">
 	<h2 class="title">Astro Files</h2>
 	<p>
 		All this page was made with just HTML, CSS and JavaScript, using the Astro's
