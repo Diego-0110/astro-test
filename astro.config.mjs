@@ -1,14 +1,14 @@
 import { defineConfig } from 'astro/config'
 import react from "@astrojs/react"
-import netlify from '@astrojs/netlify/functions'
+import cloudflare from '@astrojs/cloudflare'
 // import nodejs from '@astrojs/node'
 
 // DEPLOYMENT CONFIGURATION
 export default defineConfig({
   integrations: [react()],
-  adapter: netlify(),
   output: 'hybrid',
-  site: 'https://diego-0110-astro-test.netlify.app'
+  adapter: cloudflare(),
+  site: 'http://astro-test-azr.pages.dev/'
 })
 
 // DEVELOPMENT CONFIGURATION
@@ -16,6 +16,7 @@ export default defineConfig({
 //   integrations: [react()],
 //   output: 'hybrid',
 //   adapter: nodejs({
-//     mode: 'middleware'
+//     mode: 'standalone'
 //   }),
+//   site: 'http://localhost:4321/'
 // })
